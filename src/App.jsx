@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./App.css";
+import "./app.css";
 
 export default function App() {
   const [image, setImage] = useState(null);
@@ -8,6 +8,7 @@ export default function App() {
 
   function handleImageUpload(e) {
     const file = e.target.files[0];
+
     if (!file) return;
 
     const imageUrl = URL.createObjectURL(file);
@@ -19,7 +20,9 @@ export default function App() {
 
     const newBoard = [...board];
     newBoard[index] = turn;
+
     setBoard(newBoard);
+
     setTurn(turn === "X" ? "O" : "X");
   }
 
@@ -52,8 +55,11 @@ export default function App() {
 
       {image && (
         <>
-          <p>Turn: {turn}</p>
-          <button onClick={resetGame}>Reset Game</button>
+          <p className="turn">Turn: {turn}</p>
+
+          <button className="reset-btn" onClick={resetGame}>
+            Reset Game
+          </button>
         </>
       )}
     </div>
