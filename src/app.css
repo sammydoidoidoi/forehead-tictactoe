@@ -1,33 +1,32 @@
 body {
   margin: 0;
-  background: #ccc;
+  overflow: hidden;
+  background: #d9d9d9;
 }
 
 .homepage {
   position: relative;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
 }
 
 .background {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  display: block;
 }
 
 .uploadButton {
   position: absolute;
-  left: 13%;
-  top: 49%;
-  font-size: 78px;
+  left: 12%;
+  top: 48%;
+  font-size: 90px;
   font-weight: 900;
   color: #990000;
   background: transparent;
   border: none;
   cursor: pointer;
-  font-family: Impact, Arial Black, sans-serif;
+  font-family: Impact, sans-serif;
 }
 
 .uploadButton:hover {
